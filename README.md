@@ -1,0 +1,2 @@
+# SzamtechBII
+Első projekt
