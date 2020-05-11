@@ -1,3 +1,2 @@
 # SzamtechBII
-Első projekt
-Ma volt változás
+Snake vers 0.1
