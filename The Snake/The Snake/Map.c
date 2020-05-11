@@ -1,8 +1,8 @@
-#include "Function.h"
+#include "Map.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-Map* Create(char* filename)
+Map* CreateMap(char* filename)
 {
 	Map* palya = (Map*)calloc(1, sizeof(Map));		 //Struct helyfoglalas
 	if (!palya) {
@@ -47,6 +47,9 @@ void Kiir(Map* palya) {							 //Palya kiiratasa
 			}
 			if (palya->map[i][j] == 7) {
 				printf("X");
+			}
+			if (palya->map[i][j] == 6) {
+				printf("*");
 			}
 		}
 		printf("\n");

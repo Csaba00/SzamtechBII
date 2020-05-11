@@ -1,5 +1,5 @@
-#ifndef FUNCTION_H
-#define FUNCTION_H
+#ifndef MAP_H
+#define MAP_H
 #define _CRT_SECURE_NO_WARNINGS
 #define _CRT_NONSTDC_NO_DEPRECATE
 #define WIN32_LEAN_AND_MEAN
@@ -11,7 +11,7 @@ typedef struct Map {
 	int col;
 	int** map;
 }Map;
-Map* Create(char *filename);
+Map* CreateMap(char *filename);
 void Kiir(Map* palya);
 
 #endif 
