@@ -2,10 +2,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <Windows.h>
 
 
 int main() {
 	Game* jatek;
-	jatek = CreateGame("Palya1.txt");
+	jatek = CreateGame();
+	Play(jatek);
+  
 	
 }

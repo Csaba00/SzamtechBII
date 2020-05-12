@@ -1,4 +1,4 @@
-#include "Map.h"
+﻿#include "Map.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -9,7 +9,6 @@ Map* CreateMap(char* filename)
 		printf("Nem sikerult helyet foglalni");			//Ellenorzes
 		return 0;
 	}
-
 	FILE* f;								//Palya meretenek beolvasasa
 	f = fopen(filename, "rt");
 	if (!f) {
@@ -31,6 +30,7 @@ Map* CreateMap(char* filename)
  			fscanf(f, "%i", &palya->map[i][j]);
 		}
 	}
+	return palya;
 }
 
 void Kiir(Map* palya) {							 //Palya kiiratasa
@@ -51,9 +51,17 @@ void Kiir(Map* palya) {							 //Palya kiiratasa
 			if (palya->map[i][j] == 6) {
 				printf("*");
 			}
+			if (palya->map[i][j] == 3) {
+				printf("'");
+			}
 		}
 		printf("\n");
 	}
+}
+
+void ClearLastPosition(Map* palya, int row, int col)
+{
+	palya->map[row][col] = 0;
 }
 
 
