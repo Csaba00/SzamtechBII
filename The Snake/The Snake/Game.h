@@ -6,17 +6,21 @@
 #include "Map.h"
 #include "Snake.h"
 #include <stdio.h>
-#include <stdbool.h>
+#include <time.h>
+#include <stdlib.h>
 
 
 typedef struct Game {
 	Map* palya;
 	Snake* kigyo;
+	int score;
+	int speed;
+	int timelimit;
 }Game;
 
-Game* CreateGame();
+Game* CreateGame(char* filename, int speed, int timelimit);
 
 void Play(Game* jatek);
-bool CollisionTest(Map* palya, int row, int col); //row,col->fej;
+void Apple(Game* jatek);
 
 #endif 

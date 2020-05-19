@@ -30,6 +30,8 @@ Map* CreateMap(char* filename)
  			fscanf(f, "%i", &palya->map[i][j]);
 		}
 	}
+
+
 	return palya;
 }
 
@@ -54,15 +56,16 @@ void Kiir(Map* palya) {							 //Palya kiiratasa
 			if (palya->map[i][j] == 3) {
 				printf("'");
 			}
+			if (palya->map[i][j] == 5) {
+				printf("@");
+			}
+			
+			
 		}
 		printf("\n");
 	}
 }
 
-void ClearLastPosition(Map* palya, int row, int col)
-{
-	palya->map[row][col] = 0;
-}
 
 
 

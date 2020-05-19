@@ -7,12 +7,11 @@
 #include <stdio.h>
 
 typedef struct Map {
-	int row; //sor - y
-	int col; //oszlop - x
-	int** map;
+	int row; 
+	int col; 
+	int** map; //palyakat tartalmaz
 }Map;
 Map* CreateMap(char *filename);
 void Kiir(Map* palya);
-void ClearLastPosition(Map* palya, int row, int col);
 
 #endif 
