@@ -31,7 +31,6 @@ Map* CreateMap(char* filename)
 		}
 	}
 
-
 	return palya;
 }
 
@@ -59,8 +58,6 @@ void Kiir(Map* palya) {							 //Palya kiiratasa
 			if (palya->map[i][j] == 5) {
 				printf("@");
 			}
-			
-			
 		}
 		printf("\n");
 	}

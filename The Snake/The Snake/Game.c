@@ -20,9 +20,9 @@ Game* CreateGame(char* filename, int speed, int timelimit)
 
 void Play(Game* jatek)
 {
+	//INICIALIZALAS
 	int row=0, col=0;
 	int lastrow=0, lastcol=0;
-
 	int timer = 0;
 
 	//KIGYO BERAJZOLASA A JELENLGEI MAP-RA
@@ -32,8 +32,6 @@ void Play(Game* jatek)
 
 	//RANDOM LEGELSO ALMA GENERALASA
 	srand(time(0));
-	row = jatek->kigyo->row;
-	col = jatek->kigyo->col;
 	while (jatek->palya->map[row][col] != 0) {
 		row = rand() % 10;
 		col = rand() % 20;
@@ -58,6 +56,8 @@ void Play(Game* jatek)
 		Sleep(jatek->speed);
 			
 		system("CLS");
+
+
 		lastrow = jatek->kigyo->row;
 		lastcol = jatek->kigyo->col;
 
@@ -68,6 +68,7 @@ void Play(Game* jatek)
 		//LEGUTOLSO POZICIO TORLESE
 		jatek->palya->map[lastrow][lastcol] = 0;
 
+		//UJ KIGYO KOORDINATAI
 		row = jatek->kigyo->row;
 		col = jatek->kigyo->col;
 
@@ -75,13 +76,12 @@ void Play(Game* jatek)
 		if (jatek->palya->map[row][col] == 1 || jatek->palya->map[row][col] == 7 || jatek->palya->map[row][col] == 2 || jatek->palya->map[row][col] == 3) {
 			jatek->palya->map[row][col] = 6;
 			Kiir(jatek->palya);
+			Sleep(1000);
 			break;
 		}
 
 		//KIGYO BERAJZOLASA A JELENLGEI MAP-RA
 		Apple(jatek);
-		row = jatek->kigyo->row;  
-		col = jatek->kigyo->col;
 		jatek->palya->map[row][col] = 6; 
 		currentTime = time(NULL);
 		timer = currentTime - startTime;

@@ -18,9 +18,12 @@ typedef struct Game {
 	int timelimit;
 }Game;
 
+//JATEK LETREHOZASA
 Game* CreateGame(char* filename, int speed, int timelimit);
 
+//JATEK FUTTATASA
 void Play(Game* jatek);
+//ALMA GENERALASA
 void Apple(Game* jatek);
 
 #endif 

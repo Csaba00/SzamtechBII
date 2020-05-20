@@ -15,7 +15,6 @@ Snake* CreateSnake()
 	return kigyo;
 }
 
-
 //KIGYO MOZGTASA - 8 FEL, 2 LE, 4 BALRA, 6 JOBBRA
 void MoveHead(Snake* kigyo, int irany)
 {

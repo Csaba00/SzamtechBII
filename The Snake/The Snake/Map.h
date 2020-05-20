@@ -11,7 +11,10 @@ typedef struct Map {
 	int col; 
 	int** map; //palyakat tartalmaz
 }Map;
+
+//PALYA LETREHOZASA
 Map* CreateMap(char *filename);
+//PALYA KIIRATASA
 void Kiir(Map* palya);
 
 #endif 

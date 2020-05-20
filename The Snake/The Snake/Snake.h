@@ -9,12 +9,14 @@
 
 
 typedef struct Snake {
-	int row, col;
-	int irany;
+	int row, col; //Kigyo koordinata
+	int irany;	  //Kigyo iranya
 }Snake;
 
+//KIGYO LETREHOZASA
 Snake* CreateSnake();
 
+//KIGYO MOZGATASA
 void MoveHead(Snake* kigyo, int irany);
 
 
