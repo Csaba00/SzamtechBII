@@ -5,6 +5,7 @@ Három különböző pálya lesz, amely során egy almát kell felvenni és min�
 nehézsége a pálya méretétől függ, illetve a gyorsaságától.
 
 MOZGATAS: Nyilak -> FEL, LE, JOBBRA, BALRA
+
 CEL: Minel tobb pontszamot szerezni a megadott idon belul
 
 1.Map -> 40s

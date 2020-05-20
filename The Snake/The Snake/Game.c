@@ -32,6 +32,7 @@ void Play(Game* jatek)
 
 	//RANDOM LEGELSO ALMA GENERALASA
 	srand(time(0));
+
 	while (jatek->palya->map[row][col] != 0) {
 		row = rand() % 10;
 		col = rand() % 20;
